@@ -1,0 +1,10 @@
+#!/usr/bin/env perl
+
+# PODNAME: Tapper API
+use strict;
+use warnings;
+
+use Mojolicious::Commands;
+
+Mojolicious::Commands->start_app('Tapper::API');
+
