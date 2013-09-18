@@ -5,7 +5,6 @@ use strict;
 use 5.010;
 
 use Mojolicious::Lite;
-use JSON::XS;
 
 put 'unit-test/:testrun' => sub {
         my $self = shift;
@@ -14,6 +13,7 @@ put 'unit-test/:testrun' => sub {
 
         my $data;
         if ($self->tx->req->body) {
+                require JSON::XS;
                 $data = eval{JSON::XS::decode_json($self->tx->req->body)};
                 if ($@) {
                         $self->render(json => {

@@ -7,7 +7,6 @@ use strict;
 use warnings;
 
 use Mojo::Base 'Mojolicious';
-use Tapper::Cmd;
 use Tapper::Config;
 
 sub startup {
