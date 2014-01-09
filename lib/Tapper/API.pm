@@ -11,7 +11,7 @@ use Tapper::Config;
 
 sub startup {
         my $self = shift;
-
+        $self->plugin('TapperConfig');
         my $cfg = Tapper::Config->subconfig;
         my $r = $self->routes;
         foreach my $target (@{$cfg->{api}->{routes}}) {
