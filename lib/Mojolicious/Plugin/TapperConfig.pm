@@ -30,7 +30,11 @@ sub register {
   my ($self, $app) = @_;
   my $port = Tapper::Config->subconfig->{rest_api_port} || 3000;
 
-  my $config = {hypnotoad => {listen => ["http://*:$port"]}};
+  my $caller  =  lc((caller(2))[0]);
+  $caller     =~ s/:+/_/;
+  my $pid_file = Tapper::Config->subconfig->{paths}{workdir}."/$caller.pid";
+
+  my $config = {hypnotoad => {listen => ["http://*:$port"], pid_file => $pid_file}};
   my $current = $app->defaults(config => $app->config)->config;
   %$current = (%$current, %$config);
 
