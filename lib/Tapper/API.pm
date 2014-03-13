@@ -1,6 +1,6 @@
 package Tapper::API;
 
-# ABSTRACT: cmdline frontend Tapper::API
+# ABSTRACT: Tapper - REST frontend
 
 use 5.010;
 use strict;
