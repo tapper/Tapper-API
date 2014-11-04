@@ -1,8 +1,18 @@
 #!/usr/bin/env perl
 
 # PODNAME: Tapper API
+
+
 use strict;
 use warnings;
+
+BEGIN {
+    use CGI::Carp qw(carpout);
+    open( my $fh_log, '>>', '/var/log/tapper/tapper-rest-api.log')
+        or die "Unable to open log for tapper-rest-api: $!\n"
+    ;
+    carpout( $fh_log );
+}
 
 use Mojolicious::Commands;
 
