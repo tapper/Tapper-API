@@ -1,1 +1,3 @@
 .build
+/pre-push
+t/tapper_schema_testrundb_test.sqlite
