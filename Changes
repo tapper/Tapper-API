@@ -1,0 +1,5 @@
+Revision history for {{$dist->name}}
+
+{{$NEXT}}
+        - Tapper - REST frontend using Mojolicious
+        - first public CPAN release
