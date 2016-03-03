@@ -1,4 +1,4 @@
-#! /usr/bin/env perl
+#! /usr/bin/perl
 # PODNAME: tapper-rest-api-messagereceiver-daemon (hypnotoad)
 # ABSTRACT: daemon for Tapper::API
 
