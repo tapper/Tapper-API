@@ -16,7 +16,7 @@ sub startup {
         my $cfg = Tapper::Config->subconfig;
         my $r = $self->routes;
         foreach my $target (@{$cfg->{api}->{routes}}) {
-                $r->any($target->{url})->detour($target->{module});
+                $r->any($target->{url})->partial(1)->to($target->{module});
         }
 
 }
