@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+5.0.2     2021-03-25
         - fix deprecated detour() - RT#134653
         - more and reworked api endpoints for file lists
 
